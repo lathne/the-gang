@@ -67,7 +67,7 @@ p {
     background: url(/img/character1.png) no-repeat 0 0;
     background-size: 100%;
     width: 363px;
-    height: 344px;
+    height: 363px;
     position: absolute;
     top: 127px;
     right: 210px;
@@ -91,7 +91,7 @@ p {
     background: url(/img/character3.png) no-repeat 0 0;
     background-size: 100%;
     width: 297px;
-    height: 286px;
+    height: 297px;
     position: absolute;
     top: 240px;
     right: 25px;
@@ -128,6 +128,9 @@ button.cta {
     padding: 20px 30px;
     border-radius: 10px;
     text-decoration: none;
+    border: none;
+    outline:none;
+    cursor: pointer;
 }
 
 a.cta.alt,
@@ -135,6 +138,16 @@ button.cta.alt {
     background-color: #FFD400;
     color: #111111;
     box-shadow: 0 0 0 10px  rgba(0,0,0,.15);
+}
+
+a.cta:active,
+button.cta:active {
+    opacity: .7;
+}
+
+a.cta.alt:hover,
+button.cta.alt:hover {
+    opacity: .7;
 }
 
 nav {
@@ -205,13 +218,91 @@ nav ul li a {
     font-weight: 800;
 }
 
+.nb-list {
+    width: 470px;
+    padding: 20px 20px 0 20px;
+    box-sizing: border-box;
+    background-color: #EDEDED;
+    float: left;
+    margin: 0 20px 20px 0;
+}
+
+.sep {
+    width: 470px;
+    height: 10px;
+    background-color: #111111;
+    margin: 70px auto;
+}
+
+
+.story h3{
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.nb-list li {
+    height: 70px;
+    border-radius: 10px;
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 20px;
+    padding: 6px 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.nb-list li.blue {background-color: #007FFF;}
+.nb-list li.gray {background-color: rgba(0,0,0,.1);}
+.nb-list li.yellow {
+    background-color: #FFD400;
+    color: #111111;
+}
+.nb-list li.red {background-color: #FF3300;}
+.nb-list li.pink {background-color: #FFADF9;}
+.nb-list li.salmon {background-color: #FA8072;}
+
+.nb-list li.dragging {
+    top: -55px;
+    left: 70px;
+    right: -30px;
+    transform: rotate(6deg);
+    box-shadow: 0 2px 14px rgba(0,0,0,.3);
+}
+
+.nb-list li.dragging::after {
+    content: '';
+    width: 54px;
+    height: 50px;
+    background: url(img/hand.png) no-repeat 0 0;
+    background-size: 100%;
+    position: absolute;
+    bottom: -30px;
+    left: 60%;
+}
+
+.gang-img {
+    display: block;
+    margin: 0 auto;
+}
+
+footer {
+    text-align: center;
+    color: rgba(0,0,0,.4);
+    font-size: 20px;
+    margin: 85px 0 45px;
+    font-weight: bold;
+}
+
+footer a {
+    color: rgba(0,0,0,.4) ;
+}
+
+.popup {
+    display: none;
+}
 
 /*
-
-<div class="more-info" id="more-info">
-    <h2>Join Our Fan Club</h2>
-    <p>Now we know aliens exist, we have <span class="highlight">a party</span> every week hopping they come back. If you  are an alien and want to join us then join our club. Members will also receive pictures of us in all shapes and sizes. Cool huh?</p>
-    <button class="cta">Sign Me Up!</button>
-</div>
 
 */
