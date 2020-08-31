@@ -364,10 +364,6 @@ footer a {
     cursor: pointer;
 }
 
-.popup .row {
-
-}
-
 .popup .row:after {
     content: '';
     display: table;
