@@ -313,7 +313,7 @@ footer a {
     z-index: 2;
 }
 
-.popup .show {
+.popup.show {
     display: block;
 }
 

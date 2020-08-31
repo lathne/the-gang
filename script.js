@@ -1,12 +1,10 @@
-console.log('please')
 
+function showPopup() {
+    var popup = document.getElementById('popup');
+    popup.classList.add('show')
+}
 
-// function showPopup() {
-//     var popup = document.getElementById('popup');
-//     popup.classList.add('show')
-// }
-
-// function hidePopup() {
-//     var popup = document.getElementById('popup');
-//     popup.classList.remove('show')
-// }
+function hidePopup() {
+    var popup = document.getElementById('popup');
+    popup.classList.remove('show')
+}
