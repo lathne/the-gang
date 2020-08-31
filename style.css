@@ -219,15 +219,6 @@ nav ul li a {
     font-weight: 800;
 }
 
-.nb-list {
-    width: 470px;
-    padding: 20px 20px 0 20px;
-    box-sizing: border-box;
-    background-color: #EDEDED;
-    float: left;
-    margin: 0 20px 20px 0;
-}
-
 .sep {
     width: 470px;
     height: 10px;
@@ -236,9 +227,14 @@ nav ul li a {
 }
 
 
-.story h3{
-    font-size: 40px;
-    font-weight: 800;
+.nb-list {
+    width: 470px;
+    padding: 20px 20px 0 20px;
+    box-sizing: border-box;
+    background-color: #EDEDED;
+    float: left;
+    margin: 0 20px 20px 0;
+    position: relative;
 }
 
 .nb-list li {
@@ -251,7 +247,7 @@ nav ul li a {
     margin-bottom: 20px;
     padding: 6px 20px;
     box-sizing: border-box;
-    position: relative;
+   
 }
 
 .nb-list li.blue {background-color: #007FFF;}
@@ -265,11 +261,12 @@ nav ul li a {
 .nb-list li.salmon {background-color: #FA8072;}
 
 .nb-list li.dragging {
-    top: -55px;
+    top: 70px;
     left: 70px;
     right: -30px;
     transform: rotate(6deg);
     box-shadow: 0 2px 14px rgba(0,0,0,.3);
+    position: absolute;
 }
 
 .nb-list li.dragging::after {
@@ -281,6 +278,11 @@ nav ul li a {
     position: absolute;
     bottom: -30px;
     left: 60%;
+}
+
+.story h3{
+    font-size: 40px;
+    font-weight: 800;
 }
 
 .gang-img {
@@ -300,13 +302,19 @@ footer a {
     color: rgba(0,0,0,.4) ;
 }
 
+
 .popup {
+    display: none;
     position: fixed;
     top: 0;
     bottom: 0;
     right: 0;
     left: 0;
     z-index: 2;
+}
+
+.popup .show {
+    display: block;
 }
 
 .popup .blanket {
@@ -322,35 +330,75 @@ footer a {
     box-sizing: border-box;
     padding: 30px 40px;
     width: 960px;
+    height: 500px;
     background-color: white;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -250px;
+    margin-left: -480px;
 }
 
+.popup h2 {
+    margin: 10px 0 20px;
+}
 
-/*
-    <div class="popup">
-        <div class="blanket"></div>
-        <div class="content">
-            <h2>Fill In Your Details</h2>
-            <form action="">
-               <div class="item"></div>
-                  <label>Your First Name</label>
-                  <input type="text" placeholder="Awesomeface" value="Lyiq">
-               </div>
-               <div class="item"></div>
-                  <label>Your Last Name</label>
-                  <input type="text" placeholder="Circleface">
-               </div>
-               <div class="item"></div>
-                  <label>Your Favorite Color</label>
-                  <input type="text" placeholder="Green">
-               </div>
-               <div class="item"></div>
-                  <label>Your First Food</label>
-                  <input type="text" placeholder="Apple Pie">
-              </div>
-              <button class="cta">I Want In!</button>
-            </form>
-            <button class="close">Close</button>
-        </div>
-    </div>
-*/
+.popup .cta {
+   margin-top: 40px;
+}
+
+.popup .close {
+    width: 80px;
+    height: 80px;
+    background: #FF3300 url(img/close.png) no-repeat center center;
+    background-size: 60%;
+    top: -40px;   
+    right: -40px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    text-indent: -9999px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.popup .row {
+
+}
+
+.popup .row:after {
+    content: '';
+    display: table;
+}
+
+.popup .item {
+    float: left;
+    width: 415px;
+    margin-left: 40px;
+    text-align: left;
+}
+
+.popup .item:first-child {
+    margin-left: 0;
+}
+
+.popup .item label {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.popup .item input[type='text'] {
+    display: block;
+    font-size: 30px;
+    font-weight: bold;
+    border: 4px solid #111111;
+    height: 70px;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 15px 20px;
+   
+}
