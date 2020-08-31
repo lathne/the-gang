@@ -156,6 +156,7 @@ nav {
     box-shadow:  0 5px 8px rgba(0,0,0,.2);
     position: sticky;
     top: 0;
+    z-index: 1;
 }
 
 nav .logo  {
@@ -300,9 +301,56 @@ footer a {
 }
 
 .popup {
-    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
 }
 
-/*
+.popup .blanket {
+    background-color: rgba(0,0,0,.7);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
 
+.popup .content {
+    box-sizing: border-box;
+    padding: 30px 40px;
+    width: 960px;
+    background-color: white;
+}
+
+
+/*
+    <div class="popup">
+        <div class="blanket"></div>
+        <div class="content">
+            <h2>Fill In Your Details</h2>
+            <form action="">
+               <div class="item"></div>
+                  <label>Your First Name</label>
+                  <input type="text" placeholder="Awesomeface" value="Lyiq">
+               </div>
+               <div class="item"></div>
+                  <label>Your Last Name</label>
+                  <input type="text" placeholder="Circleface">
+               </div>
+               <div class="item"></div>
+                  <label>Your Favorite Color</label>
+                  <input type="text" placeholder="Green">
+               </div>
+               <div class="item"></div>
+                  <label>Your First Food</label>
+                  <input type="text" placeholder="Apple Pie">
+              </div>
+              <button class="cta">I Want In!</button>
+            </form>
+            <button class="close">Close</button>
+        </div>
+    </div>
 */
